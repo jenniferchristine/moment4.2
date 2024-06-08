@@ -64,6 +64,15 @@ nav {
     z-index: 1000;
 }
 
+#confirmation {
+    @include space(2em, 0 0 2em 0);
+    border-radius: 0.3em 0.3em 0 0;
+    border-bottom: $border-style $detailcolor;
+    display: none;
+    animation: fadeColor 0.5s forwards;
+    color: $light_color;
+}
+
 .confirmation-box { // behövs inte om inte adderas
     @include border($border-style $darkest_color, 0.3em);
     @include placing(fixed, 20%, 50%);
@@ -141,7 +150,7 @@ main {
         padding: 2em;
     }
 
-    #btn {
+    #submitBtn {
         @include align(flex, center, center);
         @include size(100%, 50px);
         @include border(0, 0 0 5px 5px);
@@ -157,6 +166,8 @@ main {
             border: none;
             background: none; }
     }
+
+    #registerBtn { @extend #submitBtn; }
 }
 
 form {
