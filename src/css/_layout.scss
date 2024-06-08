@@ -7,7 +7,7 @@ body {
     text-align: left; font: 100% $font-stack; 
     flex-direction: column; 
 
-    h1 { text-align: center; font-size: 25px; padding: 1em 0 1em 0; }
+    h1 { text-align: center; font-size: 25px; padding: 1em 0 0.5em 0; }
     h2 { font-size: 20px; margin: 0; }
     h3 { font-size: 18px; margin: 0.4em 0 0 0; }
     h4 { margin: 0.2em 0 0 0; }
@@ -146,14 +146,12 @@ main {
 
     #addBtn {
         @include align(flex, center, center);
-        @include size(464px, 50px);
+        @include size(100%, 50px);
         @include border(0, 0 0 5px 5px);
         @include color($deviating-color, $primary-color);
-        margin-bottom: 4em;
         font: 100% $paragraph-text;
         font-weight: 600;
         letter-spacing: 0.5px;
-        max-width: 100%;
         transition: 0.2s;
         
         &:hover { background-color: $deviating-light; cursor: pointer; }
@@ -170,6 +168,7 @@ form {
     padding: 2em;
     background-color: $primary-color;
     border-radius: 5px 5px 0 0;
+    margin-bottom: 4.5em;
     width: 400px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.301);
 
