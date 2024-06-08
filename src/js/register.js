@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     registerForm.addEventListener('keydown', async (e) => {
         if (e.key === "Enter") {
-            e.preventDefault();
-            await addUser();
+            e.preventDefault(); await addUser();
         }
     });
 
