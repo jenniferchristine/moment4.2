@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdi
         const confirmationDiv = document.getElementById("confirmation");
         if (confirmationDiv) {
             confirmationDiv.style.display = "block"; // visar box om true
+
+            const confirmText = document.createTextNode("Du måste logga in för att se 'Mina sidor'");
+            confirmationDiv.appendChild(confirmText);
         }
         localStorage.removeItem("redirected"); // tar bort från localstorage
     }

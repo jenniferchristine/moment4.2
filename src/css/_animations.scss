@@ -14,10 +14,10 @@
 
   @keyframes fadeColor {
     from {
-      background-color: lighten($darker_color, 20%);
+      background-color: $detailcolor;
     }
   
     to {
-      background-color: $darker_color;
+      background-color: $primary-color;
     }
   }
