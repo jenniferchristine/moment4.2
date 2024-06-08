@@ -4,8 +4,8 @@ const token = localStorage.getItem("token");
 console.log(token);
 
 if (!token) {
-    console.log("Ingen token hittad. Omdirigerar till index.html");
-    window.location.href = 'index.html'; // omdirigera om ingen token finns
+    localStorage.setItem("redirected", "true"); // lagrar redirected vid omdirigering
+    window.location.href = "index.html";
 } else {
     console.log("Token hittad:", token);
 

@@ -1,5 +1,16 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdirigering
+    const redirected = localStorage.getItem("redirected"); // hämtar redirected i localstorage
+    if (redirected === "true") {
+        const confirmationDiv = document.getElementById("confirmation");
+        if (confirmationDiv) {
+            confirmationDiv.style.display = "block"; // visar box om true
+        }
+        localStorage.removeItem("redirected"); // tar bort från localstorage
+    }
+});
+
 async function logIn() {
     console.log("logIn-funktionen kallas...");
 
