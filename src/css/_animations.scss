@@ -14,7 +14,7 @@
 
   @keyframes fadeColor {
     from {
-      background-color: $detailcolor;
+      background-color: darken($detailcolor, 10%);
     }
   
     to {

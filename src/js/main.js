@@ -3,12 +3,12 @@
 document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdirigering
     const redirected = localStorage.getItem("redirected"); // hämtar redirected i localstorage
     if (redirected === "true") {
-        const confirmationDiv = document.getElementById("confirmation");
-        if (confirmationDiv) {
-            confirmationDiv.style.display = "block"; // visar box om true
+        const popupDiv = document.getElementById("popup");
+        if (popupDiv) {
+            popupDiv.style.display = "block"; // visar box om true
 
-            const confirmText = document.createTextNode("Du måste logga in för att se 'Mina sidor'");
-            confirmationDiv.appendChild(confirmText);
+            const popupText = document.createTextNode("Du måste logga in för att se 'Mina sidor'");
+            popupDiv.appendChild(popupText);
         }
         localStorage.removeItem("redirected"); // tar bort från localstorage
     }
