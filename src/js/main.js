@@ -1,6 +1,8 @@
 "use strict";
 
 async function logIn() {
+    console.log("logIn-funktionen kallas...");
+
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
@@ -14,7 +16,7 @@ async function logIn() {
 
     // skicka förfrågan till servern
     try {
-        const response = await fetch("https://moment4-1.onrender.com/login", {
+        const response = await fetch("https://moment4-1.onrender.com/api/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,21 +24,17 @@ async function logIn() {
             body: JSON.stringify({ username, password })
         });
 
+        const data = await response.json();
+
         console.log("Svarsdata:", data);
 
         if (response.ok) {
-            document.getElementById("confirmation").innerText = data.response.message;
             localStorage.setItem("token", data.response.token); // lagra token
-
             console.log("Token:", data.response.token);
-
         } else {
-            document.getElementById("confirmation").innerText = data.error; // felmeddelande för test
-
             console.log("Error", data.error);
         }
     } catch (error) {
         console.error("Servererror:", error);
-        document.getElementById("confirmation").innerText = "Serverfel";
     }
 }
