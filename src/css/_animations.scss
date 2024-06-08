@@ -1,0 +1,23 @@
+@use 'base' as *;
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeColor {
+    from {
+      background-color: lighten($darker_color, 20%);
+    }
+  
+    to {
+      background-color: $darker_color;
+    }
+  }
