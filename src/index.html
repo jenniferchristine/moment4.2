@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DT207G - Laboration 4.2npm </title>
+    <title>DT207G - Laboration 4.2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/main.js" type="module"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -16,26 +17,35 @@
         <img src="images/logo_jeja.svg" alt="logo for creater">
         <nav>
             <ul>
-                <li><a id="position" class="material-symbols-outlined" href="index.html">work</a></li>
-                <li><a class="material-symbols-outlined" href="#">add_box</a></li>
+                <li><a id="position" class="material-symbols-outlined" href="index.html">person</a></li>
+                <li><a class="material-symbols-outlined" href="register.html">add_box</a></li>
                 <li><a class="material-symbols-outlined" href="#">info</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div id="container">
-            <h1>Logga in</h1>
-            <div id="result">
-
-            </div>
-        </section>
-        
+        <h1>Logga in</h1>
+        <div id="result">
+            <div id="confirmation"></div>
+            <form id="addform" onsubmit="event.preventDefault(); addData();">
+                <div>
+                    <input type="text" name="username" id="username" placeholder="Användarnamn">
+                    <div id="usernameError" class="error-message"></div>
+                </div>
+                <div>
+                    <input type="text" name="password" id="password" placeholder="Lösenord">
+                    <div id="passwordError" class="error-message"></div>
+                </div>
+            </form>
+        </div>
+        <div id="addBtn">
+            <button class="material-symbols-outlined">login</button>
+        </div>
     </main>
-    
+
     <footer>
         <img src="images/logo_jeja.svg" alt="logo for creater">
         <p>Copyright Jennifer Jakobsson, 2024<br>
             dt208g Programmering i TypeScript</p>
     </footer>
-    </div>
 </body>
