@@ -47,7 +47,7 @@
 118C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\runtime-js\lib\helpers\browser\import-polyfill.js133622775861585655 0
 105C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\caniuse-lite\data\features\object-entries.js133622775878240204 0
 80C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\json5\lib\util.d.ts133622775861390490 0
-77C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\register.90bbf565.js.map133623596094218320 0
+77C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\register.90bbf565.js.map133623597177957026 0
 105C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\lmdb\node_modules\node-addon-api\except.gypi133622775854309779 0
 94C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\graph\src\ContentGraph.js133622775859325376 0
 143C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\pseudo-selectors\index.d.ts.map133622775861020460 0
@@ -68,7 +68,7 @@
 92C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\caniuse-lite\data\regions\GF.js133622775876015911 0
 145C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\pseudo-selectors\pseudos.d.ts133622775863276759 0
 95C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\packager-js\lib\helpers.js133622775859230534 0
-52C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist133623596094228314 1
+52C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist133623597177967010 1
 65C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\src\css\main.scss133622789953562560 0
 78C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\has-flag\index.js133622775853186705 0
 123C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\abortcontroller-polyfill\dist\abortcontroller-polyfill-only.js133622775854224674 0
@@ -175,7 +175,7 @@
 126C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\color.js133622775860260865 0
 71C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\semver\bin133622775864396838 1
 101C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\source-map\parcel_sourcemap_wasm133622775859425856 1
-66C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\src\js\register.js133623596688024239 0
+66C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\src\js\register.js133623597177661277 0
 106C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\posthtml\node_modules\posthtml-parser\license133622775852141772 0
 89C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\packager-svg\LICENSE133622775852066830 0
 88C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\weak-lru-cache\package.json133622775857473651 0
@@ -6018,4 +6018,4 @@
 76C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\secured.3d45c64f.js.map133623577866376586 0
 72C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\secured.6dd77f0d.js133623577866296580 0
 65C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\secured.html133623571579205745 0
-73C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\register.90bbf565.js133623596094167595 0
+73C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\register.90bbf565.js133623597177927110 0

@@ -1,17 +1,19 @@
 "use strict";
 
-const registerForm = document.getElementById("register-form");
-const registerBtn = document.getElementById("registerBtn");
+document.addEventListener("DOMContentLoaded", function() {
+    const registerForm = document.getElementById("register-form");
+    const registerBtn = document.getElementById("registerBtn");
 
-registerForm.addEventListener('keydown', async (e) => {
-    if (e.key === "Enter") {
-        e.preventDefault();
+    registerForm.addEventListener('keydown', async (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            await addUser();
+        }
+    });
+
+    registerBtn.addEventListener('click', async () => {
         await addUser();
-    }
-});
-
-registerBtn.addEventListener('click', async () => {
-    await addUser();
+    });
 });
 
 async function addUser() {
