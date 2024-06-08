@@ -6,16 +6,20 @@ async function logIn() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
+    document.getElementById("usernameError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+
     console.log("Användarnamn:", username);
     console.log("Lösenord:", password);
 
-    if (!username || !password) {
-        alert("Fyll i både lösenord och användarnamn");
-        return;
-    }
-
     // skicka förfrågan till servern
     try {
+        if (!username) { // felmeddelande gällande tomt användarnamn
+            document.getElementById("usernameError").textContent = "Vänligen ange ett användarnamn";
+        } 
+        if (!password) { // felmeddelande gällande tomt lösenord
+            document.getElementById("passwordError").textContent = "Skriv in ditt lösenord";
+        }
         const response = await fetch("https://moment4-1.onrender.com/api/login", {
             method: 'POST',
             headers: {
@@ -33,9 +37,14 @@ async function logIn() {
             console.log("Token:", data.response.token);
             window.location.href = "secured.html"; // omdirigerar till säkrad sida
         } else {
-            console.log("Error", data.error);
+            if (data.error === "Incorrect username or password") {
+                document.getElementById("passwordError").textContent = "Felaktigt användarnamn eller lösenord";
+            } else {
+                console.error("Error", data.error);
+            }
         }
     } catch (error) {
-        console.error("Servererror:", error);
+        console.error("Server error:", error);
+        document.getElementById("usernameError").textContent = "Ett fel uppstod vid inloggningen. Vänligen försök igen senare.";
     }
 }
