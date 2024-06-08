@@ -25,9 +25,9 @@
     </header>
     <main>
         <h1>Logga in</h1>
-        <div id="result">
+        <div id="container">
             <div id="popup"></div>
-            <form id="addform" onsubmit="event.preventDefault(); logIn();">
+            <form id="login-form" onsubmit="event.preventDefault(); logIn();">
                 <div>
                     <input type="text" name="username" id="username" placeholder="Användarnamn">
                     <div id="usernameError" class="error-message"></div>
@@ -36,10 +36,10 @@
                     <input type="text" name="password" id="password" placeholder="Lösenord">
                     <div id="passwordError" class="error-message"></div>
                 </div>
-                <div id="addBtn">
-                    <button type="submit" class="material-symbols-outlined">login</button>
-                </div>
             </form>
+            <div id="btn">
+                <button type="submit" form="login-form" class="material-symbols-outlined">login</button>
+            </div>
         </div>
     </main>
 

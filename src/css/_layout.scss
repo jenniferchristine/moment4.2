@@ -47,10 +47,7 @@ nav {
 
     .material-symbols-outlined { 
         @include text(30px, $deviating-color); 
-        font-weight: 400; 
-
-        &:hover { color: $deviating-light; }
-    }
+        &:hover { color: $deviating-light; }}
 
     #position { 
         background-color: $lighter_color; 
@@ -59,7 +56,7 @@ nav {
     }
 }
 
-.overlay {
+.overlay { // behövs inte om inte adderas
     @include size(100%, 100%);
     @include placing(fixed, 0, 0);
     display: none;
@@ -67,7 +64,7 @@ nav {
     z-index: 1000;
 }
 
-.confirmation-box {
+.confirmation-box { // behövs inte om inte adderas
     @include border($border-style $darkest_color, 0.3em);
     @include placing(fixed, 20%, 50%);
     transform: translate(-50%, 050%);
@@ -103,25 +100,14 @@ main {
     flex-direction: column;
     box-shadow: 0px 8px 10px rgba(39, 39, 39, 0.575);
 
-    #container { width: 100%; }
-    #result { animation: fadeIn 0.3s ease-in; }
+    #container { animation: fadeIn 0.3s ease-in; }
     a { color: $light_color; }
 
-    .workexperience {
+    .workexperience { // behövs ej om inget ska presenteras
         padding: 1.5em 0 2em 2em;
         display: flex;
         flex-direction: column;
         box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.103);
-
-        .material-symbols-outlined {
-            @include text(30px, $deviating-color);
-            background: none;
-            border: none;
-            align-self: flex-end;
-            margin-right: 25px;
-            transition: 0.1s;
-
-            &:hover { transform: scale(1.2); cursor: pointer; color: $deviating-light; } }
 
         h2, h3, h4 { letter-spacing: 0.5px; }
         .desc { @include text(22px, $deviating-color); }
@@ -144,25 +130,32 @@ main {
         color: $light_color;
     }
 
-    .text { font-size: 12px; a { color: white; }}
+    #secured-content {
+        background-color: darken($primary-color, 5%);
+        color: white;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.3em;
+        padding: 2em;
+    }
 
-    #addBtn {
+    #btn {
         @include align(flex, center, center);
         @include size(100%, 50px);
         @include border(0, 0 0 5px 5px);
         @include color($deviating-color, $primary-color);
-        font: 100% $paragraph-text;
-        font-weight: 600;
-        letter-spacing: 0.5px;
         transition: 0.2s;
+        margin-bottom: 4.5em;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
         
         &:hover { background-color: $deviating-light; cursor: pointer; }
 
         .material-symbols-outlined {
             @include text(30px, $primary-color);
             border: none;
-            background: none;
-            font-weight: 600; }
+            background: none; }
     }
 }
 
@@ -171,9 +164,7 @@ form {
     background-color: $primary-color;
     border-radius: 5px 5px 0 0;
     border-bottom: $darkest_color;
-    margin-bottom: 4.5em;
     width: 400px;
-    box-shadow: 0px 5px 20px rgba(36, 36, 36, 0.301);
 
     div {
         margin: 1em 0 0 0;
@@ -198,19 +189,6 @@ form {
 
         &::placeholder { font-size: 14px; padding: 0.5em 0 0 0.5em; }
         &[type="text"] { @include boxspace(0.3em 0 0 0.3em, border-box); }
-    }
-}
-
-section {
-    width: 100%;
-
-    div {
-        @include boxspace(2em 4em 5em 4em, border-box);
-        width: 100%;
-        margin: 0 auto;
-        background-color: $primary-color;
-
-        .material-symbols-outlined { color: $deviating-color; }
     }
 }
 

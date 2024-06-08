@@ -25,7 +25,6 @@ if (!token) {
         console.log("Skyddad resursdata:", data);
         if (data.message === "Protected route...") {
             console.log("Användaren är inloggad och har tillgång till skyddad sida");
-            document.getElementById("secured-content").innerText = "Tillgång till skyddad sida";
         } else {
             console.log("Ogiltig token. Omdirigerar till index.html.");
             window.location.href = 'index.html'; // omdirigera om tokenen är ogiltig
@@ -33,7 +32,6 @@ if (!token) {
     })
     .catch(error => {
         console.error("Fel vid åtkomst av skyddad resurs:", error);
-        alert("Ett fel uppstod vid åtkomst av skyddad resurs. Omdirigerar till index.html.");
         window.location.href = 'index.html';
     });
 }

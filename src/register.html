@@ -25,9 +25,9 @@
     </header>
     <main>
         <h1>Registrera dig</h1>
-        <div id="result">
+        <div id="container">
             <div id="confirmation"></div>
-            <form id="addform" onsubmit="event.preventDefault(); addData();">
+            <form id="register-form" onsubmit="event.preventDefault(); addData();">
                 <div>
                     <label for="username">Användarnamn:</label><br>
                     <input type="text" name="username" id="username" placeholder="Välj ett användarnamn">
@@ -53,10 +53,10 @@
                     <input type="text" name="email" id="email" placeholder="exempel@live.com">
                     <div id="emailError" class="error-message"></div>
                 </div>
-                <div id="addBtn">
-                    <button type="submit" class="material-symbols-outlined">how_to_reg</button>
-                </div>
             </form>
+            <div id="btn">
+                <button type="submit" form="register-form" class="material-symbols-outlined">how_to_reg</button>
+            </div>
         </div>
     </main>
 
