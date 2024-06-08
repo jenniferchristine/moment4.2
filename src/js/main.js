@@ -31,6 +31,7 @@ async function logIn() {
         if (response.ok) {
             localStorage.setItem("token", data.response.token); // lagra token
             console.log("Token:", data.response.token);
+            window.location.href = "secured.html"; // omdirigerar till säkrad sida
         } else {
             console.log("Error", data.error);
         }
