@@ -34,11 +34,11 @@ if (!token) {
     .catch(error => {
         console.error("Fel vid åtkomst av skyddad resurs:", error);
         alert("Ett fel uppstod vid åtkomst av skyddad resurs. Omdirigerar till index.html.");
-        window.location.href = 'index.html'; // omdirigera vid fel
+        window.location.href = 'index.html';
     });
 }
 
 function logOut() {
-    localStorage.removeItem("token"); // Ta bort token från localStorage
-    window.location.href = "logout.html"; // Omdirigera användaren till utloggningssidan eller till startsidan
+    localStorage.removeItem("token"); // ta bort token från localstorage
+    window.location.href = "logout.html";
 }
