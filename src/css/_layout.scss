@@ -139,15 +139,7 @@ form {
         font-size: 14px;
 
         &[type="text"] { @include boxspace(0 0 0 0.8em, border-box); }
-    }
-    
-    textarea {
-        @include size(100%, 120px);
-        @include border(0, 3px);
-        font: 100% $paragraph-text;
-
-        &::placeholder { font-size: 14px; padding: 0.5em 0 0 0.5em; }
-        &[type="text"] { @include boxspace(0.3em 0 0 0.3em, border-box); }
+        &[type="password"] { @include boxspace(0 0 0 0.8em, border-box); }
     }
 }
 
