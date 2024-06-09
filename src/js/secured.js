@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function logOut() {
     localStorage.removeItem("token"); // ta bort token från localstorage
-    window.location.href = "logout.html";
+    window.location.href = "index.html";
 }
 
 const token = localStorage.getItem("token");
