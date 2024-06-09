@@ -1,14 +1,12 @@
 "use strict";
 
 const token = localStorage.getItem("token");
-console.log(token);
 
 if (!token) {
     localStorage.setItem("redirected", "true"); // lagrar redirected vid omdirigering
     window.location.href = "index.html";
-} else {
-    console.log("Token hittad:", token);
 
+} else {
     fetch("https://moment4-1.onrender.com/api/protected", {
         method: 'GET',
         headers: {
@@ -22,11 +20,9 @@ if (!token) {
         return response.json();
     })
     .then(data => {
-        console.log("Skyddad resursdata:", data);
         if (data.message === "Protected route...") {
-            console.log("Användaren är inloggad och har tillgång till skyddad sida");
+
         } else {
-            console.log("Ogiltig token. Omdirigerar till index.html.");
             window.location.href = 'index.html'; // omdirigera om tokenen är ogiltig
         }
     })

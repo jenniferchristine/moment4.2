@@ -60,10 +60,9 @@ async function addUser() {
         document.getElementById('lastname').value = "";
         document.getElementById('email').value = "";
 
-        console.log("Data added", data);
-
         const confirmationDiv = document.getElementById("confirmation");
-        confirmationDiv.innerHTML = `Du är nu registrerad, ${firstname}! <br> 
+        confirmationDiv.innerHTML = 
+        `Du är nu registrerad, ${firstname}! <br> 
         <p class="text">> Klicka <a href="index.html">här</a> för att logga in<p>`;
         confirmationDiv.style.display = "block";
 

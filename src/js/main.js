@@ -17,16 +17,11 @@ document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdi
 });
 
 async function logIn() {
-    console.log("logIn-funktionen kallas...");
-
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     document.getElementById("usernameError").textContent = "";
     document.getElementById("passwordError").textContent = "";
-
-    console.log("Användarnamn:", username);
-    console.log("Lösenord:", password);
 
     try { // skicka förfrågan till servern
         if (!username) { // felmeddelande gällande tomt användarnamn
@@ -45,15 +40,14 @@ async function logIn() {
 
         const data = await response.json();
 
-        console.log("Svarsdata:", data);
-
         if (response.ok) {
             localStorage.setItem("token", data.response.token); // lagra token
-            console.log("Token:", data.response.token);
             window.location.href = "secured.html"; // omdirigerar till säkrad sida
+
         } else {
             if (data.error === "Incorrect username or password") {
                 document.getElementById("passwordError").textContent = "Felaktigt användarnamn eller lösenord";
+
             } else {
                 console.error("Error", data.error);
             }
