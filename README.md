@@ -15,9 +15,9 @@
 # Autentisering och säkerhet
 
 >### Laboration i moment 4:
-> Detta är den andra delen av Moment 4 - Autentisering och säkerhet. I denna laboration har jag skapat en webbplats ([länk till publicerad webbplats](#)) som använder Fetch API för att hämta, radera och skicka data till och från webbtjänsten. Webbplatsen har också försett med möjligheten att skapa användare och inlogg för denna. Användaren behöver vara inloggad för att se visst innehåll och har tack vare webbtjänsten ett skyddat lösenord i databasen.
+> Detta är den andra delen av Moment 4 - Autentisering och säkerhet. I denna laboration har jag skapat en webbplats ([länk till publicerad webbplats](#)) som använder Fetch API för att logga in, autentisera, säkra innehåll och registrera användare. Användaren behöver som sagt vara inloggad för att se visst innehåll och har tack vare webbtjänsten ett skyddat lösenord (hashat) i databasen.
 >
 >Webbplatsen skapar användaren och login genom POST-förfrågningar och JWT (JSON Web Token) för sessionshantering och för att förhindra obehörig åtkomst.
 >
-> [Länk till Github-repo för webbtjänst](#) <br>
-> [Länk till API/webbtjänst](#)
+> [Länk till Github-repo för webbtjänst](https://github.com/jenniferchristine/moment4.1.git) <br>
+> [Länk till API/webbtjänst](https://moment4-1.onrender.com/)
