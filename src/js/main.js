@@ -1,5 +1,25 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdirigering
+    const redirected = localStorage.getItem("redirected"); // hämtar redirected i localstorage
+
+    if (redirected === "true") {
+        const popupDiv = document.getElementById("popup");
+
+        if (popupDiv) {
+            popupDiv.style.display = "block"; // visar box "du måste vara inloggad" om true
+
+            const popupText = document.createTextNode("Du måste logga in för att se 'Mina sidor'");
+            popupDiv.appendChild(popupText);
+        }
+        localStorage.removeItem("redirected"); // tar bort från localstorage
+    }
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        logIn();
+    });
+});
+
 async function logIn() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -41,19 +61,3 @@ async function logIn() {
         document.getElementById("usernameError").textContent = "Ett fel uppstod vid inloggningen. Vänligen försök igen senare.";
     }
 }
-
-document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdirigering
-    const redirected = localStorage.getItem("redirected"); // hämtar redirected i localstorage
-
-    if (redirected === "true") {
-        const popupDiv = document.getElementById("popup");
-
-        if (popupDiv) {
-            popupDiv.style.display = "block"; // visar box "du måste vara inloggad" om true
-
-            const popupText = document.createTextNode("Du måste logga in för att se 'Mina sidor'");
-            popupDiv.appendChild(popupText);
-        }
-        localStorage.removeItem("redirected"); // tar bort från localstorage
-    }
-});
