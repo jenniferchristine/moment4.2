@@ -15,7 +15,7 @@
 # Autentisering och säkerhet
 
 >### Laboration i moment 4:
-> Detta är den andra delen av Moment 4 - Autentisering och säkerhet. I denna laboration har jag skapat en webbplats ([länk till publicerad webbplats](#)) som använder Fetch API för att logga in, autentisera, säkra innehåll och registrera användare. Användaren behöver som sagt vara inloggad för att se visst innehåll och har tack vare webbtjänsten ett skyddat lösenord (hashat) i databasen.
+> Detta är den andra delen av Moment 4 - Autentisering och säkerhet. I denna laboration har jag skapat en webbplats ([länk till publicerad webbplats](https://jeja2306-dt207g-moment4.netlify.app/)) som använder Fetch API för att logga in, autentisera, säkra innehåll och registrera användare. Användaren behöver som sagt vara inloggad för att se visst innehåll och har tack vare webbtjänsten ett skyddat lösenord (hashat) i databasen.
 >
 >Webbplatsen skapar användaren och login genom POST-förfrågningar och JWT (JSON Web Token) för sessionshantering och för att förhindra obehörig åtkomst.
 >
