@@ -50,7 +50,7 @@ async function addUser() {
         const data = await response.json();
 
         if (!response.ok) {
-            await handleValidation(data.errors);
+            await handleValidation(data.errors); // inväntar funktion för felmeddelanden
             throw new Error(data.message || "Failed to add data");
         }
 
@@ -72,9 +72,9 @@ async function addUser() {
     }
 }
 
-function handleValidation(errors) {
-    if (errors) {
-        if (errors.username) {
+function handleValidation(errors) { // tar emot mongoose-validering och dess meddelanden
+    if (errors) { // vid error...
+        if (errors.username) { // ... lägg till dess text häri
             document.getElementById("usernameError").textContent = errors.username;
         }
         if (errors.password) {

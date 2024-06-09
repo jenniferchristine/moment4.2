@@ -2,10 +2,12 @@
 
 document.addEventListener("DOMContentLoaded", function() { // lyssnar efter omdirigering
     const redirected = localStorage.getItem("redirected"); // hämtar redirected i localstorage
+
     if (redirected === "true") {
         const popupDiv = document.getElementById("popup");
+
         if (popupDiv) {
-            popupDiv.style.display = "block"; // visar box om true
+            popupDiv.style.display = "block"; // visar box "du måste vara inloggad" om true
 
             const popupText = document.createTextNode("Du måste logga in för att se 'Mina sidor'");
             popupDiv.appendChild(popupText);
@@ -26,8 +28,7 @@ async function logIn() {
     console.log("Användarnamn:", username);
     console.log("Lösenord:", password);
 
-    // skicka förfrågan till servern
-    try {
+    try { // skicka förfrågan till servern
         if (!username) { // felmeddelande gällande tomt användarnamn
             document.getElementById("usernameError").textContent = "Vänligen ange ett användarnamn";
         } 

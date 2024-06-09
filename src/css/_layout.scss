@@ -9,8 +9,6 @@ body {
 
     h1 { text-align: center; font-size: 25px; padding: 1em 0 0.5em 0; }
     h2 { font-size: 20px; margin: 0; }
-    h3 { font-size: 18px; margin: 0.4em 0 0 0; }
-    h4 { margin: 0.2em 0 0 0; }
     p { font: 100% $paragraph-text; margin-top: 8px; }
 }
 
@@ -56,14 +54,6 @@ nav {
     }
 }
 
-.overlay { // behövs inte om inte adderas
-    @include size(100%, 100%);
-    @include placing(fixed, 0, 0);
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
 #confirmation {
     @include space(2em, 0 0 2em 0);
     border-radius: 0.3em 0.3em 0 0;
@@ -71,34 +61,6 @@ nav {
     display: none;
     animation: fadeColor 0.5s forwards;
     color: $light_color;
-}
-
-.confirmation-box { // behövs inte om inte adderas
-    @include border($border-style $darkest_color, 0.3em);
-    @include placing(fixed, 20%, 50%);
-    transform: translate(-50%, 050%);
-    background-color: $detailcolor;
-    padding: 5em;
-    z-index: 1001;
-
-    .button-div {
-        display: flex;
-        justify-content: center;
-        margin: 1em 0 0;
-    }
-
-    button {
-        @include size(100%, 40px);
-        @include border(none, 0.2em);
-        margin: 1em 1em 0 1em;
-        font: 100% $paragraph-text;
-        background-color: $deviating-color;
-        box-shadow: 0 2px 5px 0 rgba(92, 92, 92, 0.5);
-        cursor: pointer;
-        transition: 0.2s;
-
-        &:hover { @include color(darken($deviating-color, 20%), $light_color); }
-    }
 }
 
 main {
@@ -111,17 +73,6 @@ main {
 
     #container { animation: fadeIn 0.3s ease-in; }
     a { color: $light_color; }
-
-    .workexperience { // behövs ej om inget ska presenteras
-        padding: 1.5em 0 2em 2em;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.103);
-
-        h2, h3, h4 { letter-spacing: 0.5px; }
-        .desc { @include text(22px, $deviating-color); }
-        &:nth-child(odd) { background-color: $primary-color; } 
-    }
 
     .error-message {
         @include text(12px, $light_color);
@@ -140,12 +91,9 @@ main {
     }
 
     #secured-content {
-        background-color: darken($primary-color, 5%);
-        color: white;
+        @include align(flex, center, center);
+        @include color(darken($primary-color, 5%), $light_color);
         width: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 0.3em;
         padding: 2em;
     }
