@@ -1,11 +1,36 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function() {
+async function authorizeUser() {
+    try { const token = localStorage.getItem("token");
+
+        if (!token) {
+            localStorage.setItem("redirected", "true"); // lagrar redirected vid omdirigering
+            throw new Error("Misslyckad auktoriserad - Token saknas");
+        }
+        const response = await fetch("https://moment4-1.onrender.com/api/protected", {
+            method: 'GET',
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (!response.ok) {
+            throw new Error("Något gick fel vid åtkomst av skyddad resurs");
+        }
+        const data = await response.json();
+
+        if (data.message !== "Protected route...") {
+            throw new Error("Token ogiltig");
+        }
+    } catch (error) {
+        console.error("Fel vid åtkomst av skyddad resurs:", error);
+        window.location.href = 'index.html';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     const logOutBtn = document.getElementById("logoutBtn");
 
     logOutBtn.addEventListener("click", async function (e) {
-        e.preventDefault();
-        logOut();
+        e.preventDefault(); logOut();
     });
 });
 
@@ -14,34 +39,4 @@ function logOut() {
     window.location.href = "index.html";
 }
 
-const token = localStorage.getItem("token");
-
-if (!token) {
-    localStorage.setItem("redirected", "true"); // lagrar redirected vid omdirigering
-    window.location.href = "index.html";
-
-} else {
-    fetch("https://moment4-1.onrender.com/api/protected", {
-        method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Något gick fel vid åtkomst av skyddad resurs");
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.message === "Protected route...") {
-
-            } else {
-                window.location.href = 'index.html'; // omdirigera om tokenen är ogiltig
-            }
-        })
-        .catch(error => {
-            console.error("Fel vid åtkomst av skyddad resurs:", error);
-            window.location.href = 'index.html';
-        });
-}
+authorizeUser();
