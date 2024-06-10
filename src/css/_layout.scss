@@ -83,7 +83,7 @@ main {
     }
 
     .option {
-        background-color: lighten($primary-color, 2%); 
+        background-color: lighten($primary-color, 12%); 
         border: $border-style darken($detailcolor, 30%); 
         color: $light_color;
         display: flex;
@@ -118,7 +118,7 @@ main {
     }
 
     #secured-content {
-        @include color(darken($primary-color, 5%), $light_color);
+        @include color(darken($primary-color, 3%), $light_color);
         display: flex;
         flex-direction: column;
         align-items: center;
