@@ -42,7 +42,7 @@
 92C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\caniuse-lite\data\regions\GF.js133622775876015911 0
 145C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\pseudo-selectors\pseudos.d.ts133622775863276759 0
 95C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\packager-js\lib\helpers.js133622775859230534 0
-52C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist133624916993589725 1
+52C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist133624917343722417 1
 65C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\src\css\main.scss133622789953562560 0
 78C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\has-flag\index.js133622775853186705 0
 123C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\abortcontroller-polyfill\dist\abortcontroller-polyfill-only.js133622775854224674 0
@@ -175,7 +175,7 @@
 69C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\chokidar133622784880550077 1
 103C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\@parcel\markdown-ansi\lib\markdown-ansi.js133622775852722048 0
 105C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\caniuse-lite\data\features\css-line-clamp.js133622775872304417 0
-66C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\src\css\_base.scss133624916990154055 0
+66C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\src\css\_base.scss133624917342481707 0
 103C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\caniuse-lite\data\features\input-number.js133622775876870901 0
 99C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\node-releases\data\processed\envs.json133622775853006811 0
 87C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\node_modules\picocolors\picocolors.d.ts133622775856430797 0
@@ -6016,7 +6016,7 @@
 74C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\moment4.2.59712999.js133624916993071073 0
 72C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\secured.6dd77f0d.js133624916993126039 0
 78C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\moment4.2.59712999.js.map133624916993136020 0
-71C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\index.8c1c22dc.css133624916993280914 0
-75C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\index.8c1c22dc.css.map133624916993307377 0
 65C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\secured.html133624916993337302 0
 75C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\logo_jeja.bb22d6d4.svg133624916993579287 0
+71C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\index.8c1c22dc.css133624917343692474 0
+75C:\Users\jenif\Desktop\dt207g\moment4\moment4.2\dist\index.8c1c22dc.css.map133624917343712747 0
