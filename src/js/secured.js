@@ -28,6 +28,7 @@ async function authorizeUser() {
     }
 }
 
+// visa användaruppgifter
 function displayUser(user) {
     const usernameElement = document.getElementById("username");
     const firstnameElement = document.getElementById("firstname");
@@ -35,10 +36,10 @@ function displayUser(user) {
     const emailElement = document.getElementById("email");
 
     if (usernameElement && firstnameElement && lastnameElement && emailElement) {
-        usernameElement.textContent = user.username || "Ej tillgänglig";
-        firstnameElement.textContent = user.firstname || "Ej tillgänglig";
-        lastnameElement.textContent = user.lastname || "Ej tillgänglig";
-        emailElement.textContent = user.email || "Ej tillgänglig";
+        usernameElement.textContent = user.username || "Ej tillgängligt";
+        firstnameElement.textContent = user.firstname || "Ej tillgängligt";
+        lastnameElement.textContent = user.lastname || "Ej tillgängligt";
+        emailElement.textContent = user.email || "Ej tillgängligt";
     } else {
         console.error("Ett eller flera DOM-element kunde inte hittas.");
     }
