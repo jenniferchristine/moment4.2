@@ -46,8 +46,8 @@ async function logIn() {
 
         if (response.ok) {
             localStorage.setItem("token", data.response.token); // lagra token
+            localStorage.setItem("username", username); // lagra användarnamn
             window.location.href = "secured.html"; // omdirigerar till säkrad sida
-
         } else {
             if (data.error === "Incorrect username or password") {
                 document.getElementById("passwordError").textContent = "Felaktigt användarnamn eller lösenord";

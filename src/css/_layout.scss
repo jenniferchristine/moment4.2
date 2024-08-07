@@ -8,7 +8,7 @@ body {
     flex-direction: column; 
 
     h1 { text-align: center; font-size: 25px; padding: 1em 0 0.5em 0; }
-    h2 { font-size: 20px; margin: 0; }
+    h2 { font-size: 20px; margin: 0; text-align: center; }
     p { font: 100% $paragraph-text; margin-top: 8px; }
 }
 
@@ -74,33 +74,6 @@ main {
     #container { animation: fadeIn 0.3s ease-in; }
     a { color: $light_color; }
 
-    #options {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .option {
-        background-color: lighten($primary-color, 12%); 
-        border: $border-style darken($detailcolor, 30%); 
-        color: $light_color;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        height: 55px;
-        border-radius: 0.1em;
-        padding-top: 0.25em;
-        align-items: center;
-        transition: 0.2s ease-in-out;
-
-        &:hover { 
-            cursor: pointer; 
-            background-color: darken($primary-color, 10%);
-            border: $border-style darken($detailcolor, 20%); }
-    }
-
     .error-message {
         @include text(12px, $light_color);
         font-style: italic;
@@ -119,12 +92,15 @@ main {
 
     #secured-content {
         @include color(darken($primary-color, 3%), $light_color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 400px;
         border-radius: 0.3em;
         padding: 2em;
+    }
+
+    #user-info {
+        background-color: darken($detailcolor, 25%);
+        padding: 2em;
+        border-radius: 0.3em;
     }
 
     #submitBtn {
